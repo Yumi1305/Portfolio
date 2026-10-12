@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Emily Xue: peer learning, computational neuroscience, restaurant sites and motion work.">
+<title>Emily Xue · Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&text=%E5%AD%B8%E8%85%A6%E9%A3%9F%E5%8B%95%E6%98%A5%E5%A4%8F%E7%A7%8B%E5%86%AC%E4%BD%9C%E5%93%81%E9%9B%86%E5%9B%9B%E5%AD%A3%E5%A2%A8%E9%9D%92%E6%9C%B1%E9%9D%9B%E6%A2%85%E9%87%91%E7%A2%A7&display=swap">
+<style>
+/* Layout: a hanging scroll. One ink spine down the left, asymmetric 12-col grid, each category opens on a giant hanzi that fills with ink as you arrive. */
+:root{
+  --paper:#EDEFEB; --paper-2:#E3E7E2; --ink:#15181A; --ink-2:#585E5F; --rule:#C9CFCA;
+  --celadon:#4F8273; --celadon-soft:#D3E2DA; --seal:#4F8273;
+  --f-display:"Gowun Batang","Noto Serif SC","Songti SC",Georgia,serif;
+  --f-han:"Noto Serif SC","Songti SC","SimSun","Gowun Batang",serif;
+  --f-body:"IBM Plex Sans KR","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --gut:clamp(16px,4vw,56px);
+  --s-1:.8125rem; --s0:1rem; --s1:1.25rem; --s2:1.75rem; --s3:2.6rem; --s4:clamp(3rem,9vw,7.5rem);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111413; --paper-2:#181C1A; --ink:#E7E9E4; --ink-2:#9BA29E; --rule:#2A302D;
+  --celadon:#8CBDAD; --celadon-soft:#1C2A25; --seal:#8CBDAD; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111413; --paper-2:#181C1A; --ink:#E7E9E4; --ink-2:#9BA29E; --rule:#2A302D;
+  --celadon:#8CBDAD; --celadon-soft:#1C2A25; --seal:#8CBDAD; color-scheme:dark}
+
+/* Palette variations: 青 celadon (default), 朱 cinnabar, 靛 indigo, 梅 plum, 金 gold. Each redefines paper and accent for both themes. */
+:root[data-palette="zhu"]{--paper:#EFEDEC;--paper-2:#E6E2E0;--rule:#D2CCC9;--celadon:#A8382A;--celadon-soft:#F0DAD4;--seal:#A8382A}
+:root[data-palette="dian"]{--paper:#ECEEF2;--paper-2:#E1E5EC;--rule:#C8CFDA;--celadon:#2D4A7C;--celadon-soft:#D6DEEC;--seal:#2D4A7C}
+:root[data-palette="mei"]{--paper:#EFECEE;--paper-2:#E6E0E4;--rule:#D3CAD0;--celadon:#8A3A62;--celadon-soft:#EDD8E2;--seal:#8A3A62}
+:root[data-palette="bi"]{--paper:#F9FBFB;--paper-2:#EFF4F5;--ink:#122126;--ink-2:#55676C;--rule:#DAE3E5;--celadon:#0E7489;--celadon-soft:#D6EDF1;--seal:#0E7489}
+:root[data-palette="jin"]{--paper:#EDECE7;--paper-2:#E4E2DA;--rule:#CFCCC1;--celadon:#8C6D22;--celadon-soft:#ECE2C6;--seal:#8C6D22}
+@media (prefers-color-scheme:dark){
+  :root[data-palette="zhu"]:not([data-theme="light"]){--paper:#141110;--paper-2:#1C1716;--rule:#302826;--celadon:#E37563;--celadon-soft:#2E1B18;--seal:#E37563}
+  :root[data-palette="dian"]:not([data-theme="light"]){--paper:#0F1218;--paper-2:#161B24;--rule:#272E3B;--celadon:#93ADDB;--celadon-soft:#1A2335;--seal:#93ADDB}
+  :root[data-palette="mei"]:not([data-theme="light"]){--paper:#141013;--paper-2:#1C161A;--rule:#30272D;--celadon:#D993B6;--celadon-soft:#2B1A24;--seal:#D993B6}
+  :root[data-palette="bi"]:not([data-theme="light"]){--paper:#0C1416;--paper-2:#121C1F;--ink:#E4ECEE;--ink-2:#93A6AB;--rule:#22323A;--celadon:#5CC3D3;--celadon-soft:#10282D;--seal:#5CC3D3}
+  :root[data-palette="jin"]:not([data-theme="light"]){--paper:#12110E;--paper-2:#1A1814;--rule:#2E2B23;--celadon:#D6B663;--celadon-soft:#2A2519;--seal:#D6B663}
+}
+:root[data-palette="zhu"][data-theme="dark"]{--paper:#141110;--paper-2:#1C1716;--rule:#302826;--celadon:#E37563;--celadon-soft:#2E1B18;--seal:#E37563}
+:root[data-palette="dian"][data-theme="dark"]{--paper:#0F1218;--paper-2:#161B24;--rule:#272E3B;--celadon:#93ADDB;--celadon-soft:#1A2335;--seal:#93ADDB}
+:root[data-palette="mei"][data-theme="dark"]{--paper:#141013;--paper-2:#1C161A;--rule:#30272D;--celadon:#D993B6;--celadon-soft:#2B1A24;--seal:#D993B6}
+:root[data-palette="bi"][data-theme="dark"]{--paper:#0C1416;--paper-2:#121C1F;--ink:#E4ECEE;--ink-2:#93A6AB;--rule:#22323A;--celadon:#5CC3D3;--celadon-soft:#10282D;--seal:#5CC3D3}
+:root[data-palette="jin"][data-theme="dark"]{--paper:#12110E;--paper-2:#1A1814;--rule:#2E2B23;--celadon:#D6B663;--celadon-soft:#2A2519;--seal:#D6B663}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-weight:300;font-size:var(--s0);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--celadon);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.mono{font-family:var(--f-mono);font-size:var(--s-1);letter-spacing:.04em}
+.label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0;line-height:1.08}
+p{margin:0;max-width:62ch}
+
+/* progress brush line */
+.progress{position:fixed;left:0;top:0;height:2px;width:100%;background:var(--ink);transform-origin:0 50%;transform:scaleX(0);z-index:50}
+@supports (animation-timeline:scroll()){.progress{animation:grow linear both;animation-timeline:scroll(root)}}
+@keyframes grow{to{transform:scaleX(1)}}
+
+/* nav */
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in oklab,var(--paper) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--f-display);font-size:1.05rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+.seal{display:inline-grid;place-items:center;width:28px;height:28px;border:1.5px solid var(--seal);color:var(--seal);font-family:var(--f-han);font-weight:900;font-size:12px;line-height:1;border-radius:3px;transform:rotate(-4deg)}
+nav.top ul{display:flex;gap:clamp(10px,2.4vw,28px);list-style:none;margin:0;padding:0}
+nav.top ul a{text-decoration:none;display:flex;align-items:baseline;gap:6px;font-size:.9rem;color:var(--ink-2);transition:color .3s}
+nav.top ul a b{font-family:var(--f-han);font-weight:600;color:var(--ink);font-size:1rem}
+nav.top ul a:hover{color:var(--ink)}
+@media (max-width:720px){nav.top ul a span{display:none}}
+.navr{display:flex;align-items:center;gap:clamp(14px,3vw,36px)}
+.palette{display:flex;gap:6px;align-items:center;padding-left:clamp(10px,2vw,22px);border-left:1px solid var(--rule)}
+.palette button{width:24px;height:24px;border-radius:50%;border:1px solid var(--rule);background:var(--paper);display:grid;place-items:center;cursor:pointer;padding:0;transition:transform .3s,border-color .3s}
+.palette button i{width:12px;height:12px;border-radius:50%;background:var(--sw);transition:transform .3s}
+.palette button:hover{transform:translateY(-2px)}
+.palette button[aria-pressed="true"]{border-color:var(--ink)}
+.palette button[aria-pressed="true"] i{transform:scale(1.25)}
+.palette .pname{font-family:var(--f-han);font-weight:600;color:var(--celadon);font-size:1rem;min-width:1.1em;margin-left:4px;transition:color .5s}
+@media (max-width:520px){.brand .bt{display:none}.palette .pname{display:none}.palette button{width:22px;height:22px}}
+body,nav.top{transition:background-color .6s ease,color .6s ease}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+
+/* hero */
+.hero{padding-block:clamp(48px,9vw,120px) clamp(40px,7vw,96px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.hero h1{font-size:var(--s4);letter-spacing:-.02em;margin-block:18px 26px}
+.hero h1 .ch{display:inline-block;animation:inkin 1.1s cubic-bezier(.2,.7,.1,1) backwards}
+@keyframes inkin{from{opacity:0;filter:blur(12px);transform:translateY(.25em)}}
+.hero .lede{font-size:var(--s1);color:var(--ink-2);max-width:36ch;animation:fade 1s .7s backwards}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:34px;animation:fade 1s .9s backwards}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.hanrow{font-family:var(--f-han);font-weight:600;font-size:1rem;letter-spacing:.5em;color:var(--celadon)}
+.field{position:relative}
+.field canvas{display:block;width:100%;aspect-ratio:1;max-width:100%;cursor:crosshair;touch-action:pan-y}
+.field figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:14px;border-top:1px solid var(--rule);padding-top:12px}
+.field figcaption .hint{color:var(--ink-2)}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.field{max-width:440px}}
+
+/* chapters */
+.chapter{position:relative;padding-block:clamp(72px,11vw,150px) clamp(40px,6vw,80px);border-top:1px solid var(--rule)}
+.chapter-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(20px,5vw,72px);align-items:end;margin-bottom:clamp(40px,6vw,80px)}
+.glyph{font-family:var(--f-han);font-weight:900;font-size:clamp(7rem,22vw,17rem);line-height:.82;color:transparent;-webkit-text-stroke:1.2px var(--ink);
+  background:linear-gradient(to top,var(--ink) 0 50%,transparent 50% 100%);background-size:100% 200%;background-position:0 0;-webkit-background-clip:text;background-clip:text;user-select:none}
+@supports (animation-timeline:view()){
+  .glyph{background-position:0 100%;animation:fillink linear both;animation-timeline:view();animation-range:entry 10% cover 45%}
+}
+@keyframes fillink{from{background-position:0 100%}to{background-position:0 0}}
+.chapter-head h2{font-size:var(--s3);margin-block:10px 14px}
+.chapter-head p{color:var(--ink-2);font-size:1.06rem}
+@media (max-width:640px){.chapter-head{grid-template-columns:1fr}.glyph{font-size:8rem}}
+
+/* scroll reveal for blocks (visible at rest if unsupported) */
+@supports (animation-timeline:view()){
+  .rise{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+  .wipe{animation:wipe linear both;animation-timeline:view();animation-range:entry 5% cover 40%}
+}
+@keyframes rise{from{opacity:0;transform:translateY(48px)}}
+@keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.04em;padding:4px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--ink-2)}
+.links{display:flex;flex-wrap:wrap;gap:12px 24px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:500;font-size:.95rem;padding:11px 18px;border:1px solid var(--ink);border-radius:2px;position:relative;overflow:hidden;isolation:isolate;transition:color .45s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleX(0);transform-origin:0 50%;transition:transform .45s cubic-bezier(.7,0,.2,1);z-index:-1}
+.btn:hover{color:var(--paper)}.btn:hover::before{transform:scaleX(1)}
+.btn.ghost{border-color:var(--rule)}
+.arrow{transition:transform .35s}.btn:hover .arrow{transform:translateX(4px)}
+ul.points{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+ul.points li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px}
+ul.points li::before{content:"";width:10px;height:1px;background:var(--celadon);margin-top:.85em}
+
+/* 學 S4S */
+.s4s{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.orbit{position:relative;aspect-ratio:1;max-width:460px;width:100%;justify-self:center}
+.orbit .ring{position:absolute;inset:14%;border:1px solid var(--ink);border-radius:50%;animation:spin 18s linear infinite}
+.orbit .ring.b{inset:24%;border-color:var(--celadon);animation-duration:12s;animation-direction:reverse}
+.orbit .dot{position:absolute;width:16px;height:16px;border-radius:50%;top:-8px;left:calc(50% - 8px);background:var(--ink)}
+.orbit .ring.b .dot{background:var(--celadon);width:12px;height:12px;top:-6px;left:calc(50% - 6px)}
+.orbit .core{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.orbit .core span{font-family:var(--f-display);font-size:clamp(1.3rem,2.6vw,1.8rem);line-height:1.2}
+.orbit .core small{display:block;margin-top:6px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stack{display:grid;gap:22px}
+@media (max-width:820px){.s4s{grid-template-columns:1fr}.orbit{max-width:320px}}
+
+/* 腦 neuro */
+.neuro-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);margin-top:8px}
+.facts div{padding:16px 0;border-bottom:1px solid var(--rule)}
+.facts div:nth-child(odd){padding-right:16px}
+.facts b{display:block;font-family:var(--f-display);font-size:var(--s2);font-weight:400;line-height:1.1;font-variant-numeric:tabular-nums}
+.facts span{color:var(--ink-2);font-size:.88rem}
+.genome{background:var(--paper-2);padding:clamp(16px,2.4vw,28px);border:1px solid var(--rule)}
+.genome canvas{width:100%;display:block;aspect-ratio:75/40}
+.genome .row{display:flex;justify-content:space-between;gap:12px;margin-top:12px;flex-wrap:wrap}
+.legend{display:flex;gap:16px;flex-wrap:wrap}
+.legend i{display:inline-block;width:9px;height:9px;margin-right:6px;vertical-align:middle}
+.percept{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.3fr);gap:clamp(16px,3vw,36px);margin-top:clamp(48px,7vw,88px);align-items:center}
+.percept figure{margin:0}
+.percept canvas{width:100%;aspect-ratio:1;display:block;border:1px solid var(--rule)}
+.percept figcaption{margin-top:8px}
+.toggle{display:inline-flex;border:1px solid var(--ink);border-radius:2px;margin-top:20px}
+.toggle button{font:inherit;font-size:.9rem;background:none;color:var(--ink);border:0;padding:9px 16px;cursor:pointer;transition:background .3s,color .3s}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.figs{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(16px,3vw,32px);margin-top:clamp(48px,7vw,88px)}
+.figs figure{margin:0}
+.figs img{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--rule)}
+.figs figcaption{margin-top:10px;color:var(--ink-2);font-size:.88rem}
+@media (max-width:820px){.neuro-top,.figs{grid-template-columns:1fr}.percept{grid-template-columns:1fr 1fr}.percept .ptext{grid-column:1/-1}}
+
+/* 食 restaurants */
+.fs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.photos{position:relative;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(70px,9vw,120px);gap:10px}
+.photos .ph{overflow:hidden;background:var(--paper-2)}
+.photos img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)}
+.photos .ph:hover img{transform:scale(1.06)}
+.ph.a{grid-column:1/5;grid-row:1/4}.ph.b{grid-column:5/7;grid-row:2/4}.ph.c{grid-column:2/7;grid-row:4/6}
+.seasons{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;border-top:1px solid var(--ink)}
+.seasons div{padding:14px 0 0;text-align:left}
+.seasons b{font-family:var(--f-han);font-weight:600;font-size:clamp(1.6rem,3.4vw,2.4rem);display:block;line-height:1;transition:color .4s,transform .4s}
+.seasons div:hover b{color:var(--celadon);transform:translateY(-4px)}
+.fs h3{font-size:var(--s3);margin-block:8px 18px}
+.fs .stack{gap:20px}
+.more{margin-top:clamp(64px,9vw,120px)}
+.more-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.more-head h3{font-size:var(--s2)}
+.sites{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink);columns:2;column-gap:clamp(24px,4vw,56px)}
+.sites li{break-inside:avoid;border-bottom:1px solid var(--rule)}
+.sites a{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:14px;align-items:baseline;text-decoration:none;padding:14px 8px;position:relative;isolation:isolate;transition:color .4s,padding .4s}
+.sites a::before{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleY(0);transform-origin:50% 100%;transition:transform .4s cubic-bezier(.7,0,.2,1);z-index:-1}
+.sites a:hover{color:var(--paper);padding-left:18px}
+.sites a:hover::before{transform:scaleY(1)}
+.sites a:hover .mono{color:var(--paper)}
+.sites .n{font-family:var(--f-display);font-size:1.12rem}
+.sites .mono{color:var(--ink-2);transition:color .4s}
+@media (max-width:820px){.fs{grid-template-columns:1fr}.sites{columns:1}}
+
+/* 動 motion */
+.lumi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center;margin-bottom:clamp(64px,9vw,120px)}
+.breath{position:relative;aspect-ratio:1;max-width:420px;width:100%;justify-self:center;display:grid;place-items:center}
+.breath .c{position:absolute;border-radius:50%;border:1px solid var(--celadon);width:40%;height:40%;animation:breathe 8s ease-in-out infinite}
+.breath .c:nth-child(2){animation-delay:-2.6s;border-color:var(--ink)}
+.breath .c:nth-child(3){animation-delay:-5.2s}
+.breath .t{font-family:var(--f-display);font-size:clamp(1.2rem,2.4vw,1.6rem);text-align:center}
+@keyframes breathe{0%,100%{transform:scale(.6);opacity:.25}50%{transform:scale(2.3);opacity:1}}
+.lumi h3{font-size:var(--s3);margin-block:8px 18px}
+.exp-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.exp-head h3{font-size:var(--s2)}
+.exps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px}
+.exp{display:flex;flex-direction:column;text-decoration:none;border:1px solid var(--rule);background:var(--paper);transition:border-color .3s,transform .5s cubic-bezier(.2,.7,.1,1);transform-style:preserve-3d;will-change:transform}
+.exp:hover{border-color:var(--ink)}
+.exp .stage{aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--paper-2);perspective:600px}
+.exp .cap{padding:14px 16px 16px;display:grid;gap:4px}
+.exp .cap b{font-family:var(--f-display);font-weight:400;font-size:1.15rem}
+.exp .cap span{color:var(--ink-2);font-size:.88rem;line-height:1.5}
+/* mini demos */
+.can{position:absolute;left:50%;top:50%;width:26%;height:62%;margin:-31% 0 0 -13%;transform-style:preserve-3d;animation:canspin 6s linear infinite}
+.can i{position:absolute;inset:0;border-radius:14px/8px;background:linear-gradient(90deg,var(--celadon) 0 18%,var(--ink) 40%,var(--celadon) 70%,var(--ink) 100%);background-size:200% 100%;animation:canshade 6s linear infinite}
+.bubble{position:absolute;bottom:-10px;width:8px;height:8px;border:1px solid var(--ink-2);border-radius:50%;animation:up 4s ease-in infinite}
+@keyframes canspin{0%,100%{transform:translateY(4px) rotateZ(-6deg)}50%{transform:translateY(-8px) rotateZ(6deg)}}
+@keyframes canshade{to{background-position:-200% 0}}
+@keyframes up{to{transform:translateY(-220px);opacity:0}}
+.persp{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transform-style:preserve-3d}
+.persp i{position:absolute;width:38%;height:60%;border:1px solid var(--ink);background:var(--paper);animation:deck 7.5s cubic-bezier(.7,0,.2,1) infinite}
+.persp i:nth-child(2){animation-delay:-2.5s;background:var(--celadon-soft)}
+.persp i:nth-child(3){animation-delay:-5s;background:var(--paper-2)}
+@keyframes deck{0%{transform:translateX(-80%) rotateY(55deg) scale(.8);opacity:.5;z-index:1}33%{transform:translateX(0) rotateY(0) scale(1);opacity:1;z-index:3}66%{transform:translateX(80%) rotateY(-55deg) scale(.8);opacity:.5;z-index:1}100%{transform:translateX(-80%) rotateY(55deg) scale(.8);opacity:.5}}
+.slides{position:absolute;inset:16% 12%;overflow:hidden;border:1px solid var(--ink)}
+.slides div{display:flex;width:400%;height:100%;animation:slide 10s cubic-bezier(.8,0,.2,1) infinite}
+.slides span{flex:1;display:grid;place-items:center;font-family:var(--f-han);font-weight:600;font-size:2rem}
+.slides span:nth-child(odd){background:var(--ink);color:var(--paper)}
+@keyframes slide{0%,20%{transform:translateX(0)}25%,45%{transform:translateX(-25%)}50%,70%{transform:translateX(-50%)}75%,95%{transform:translateX(-75%)}100%{transform:translateX(0)}}
+.bars{position:absolute;inset:18% 14%;display:grid;gap:8%;align-content:center}
+.bars i{height:10px;background:var(--ink);transform-origin:0 50%;animation:bar 3.2s cubic-bezier(.7,0,.2,1) infinite}
+.bars i:nth-child(2){animation-delay:.15s;background:var(--celadon)}.bars i:nth-child(3){animation-delay:.3s;width:70%}.bars i:nth-child(4){animation-delay:.45s;width:85%;background:var(--celadon)}
+@keyframes bar{0%{transform:scaleX(0)}40%,70%{transform:scaleX(1)}100%{transform:scaleX(0);transform-origin:100% 50%}}
+.type{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-display);font-size:clamp(2rem,5vw,3rem);letter-spacing:-.02em}
+.type span{display:inline-block;animation:wave 2.4s ease-in-out infinite}
+@keyframes wave{0%,100%{transform:translateY(0)}30%{transform:translateY(-14px);color:var(--celadon)}}
+
+/* footer */
+footer{border-top:1px solid var(--ink);padding-block:clamp(56px,8vw,110px) 48px}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
+footer h2{font-size:var(--s3)}
+footer p{color:var(--ink-2);margin-top:12px}
+.bigseal{width:clamp(84px,10vw,120px);aspect-ratio:1;border:2px solid var(--seal);color:var(--seal);display:grid;grid-template-columns:1fr 1fr;place-items:center;font-family:var(--f-han);font-weight:900;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1;padding:8px;transform:rotate(-5deg);border-radius:6px}
+.colophon{grid-column:1/-1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--rule);padding-top:20px;color:var(--ink-2)}
+@media (max-width:640px){footer .wrap{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .glyph{background-position:0 0}
+}
+</style>
+</head>
+<body>
+
+
+<div class="progress" aria-hidden="true"></div>
+
+<nav class="top" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="seal" aria-hidden="true">作品</span><span class="bt">Emily Xue</span></a>
+    <div class="navr">
+    <ul>
+      <li><a href="#learning"><b>學</b><span>Learning</span></a></li>
+      <li><a href="#neuro"><b>腦</b><span>Neuroscience</span></a></li>
+      <li><a href="#food"><b>食</b><span>Restaurants</span></a></li>
+      <li><a href="#motion"><b>動</b><span>Motion</span></a></li>
+    </ul>
+    <div class="palette" role="group" aria-label="Color palette">
+      <button type="button" data-p="qing" aria-pressed="true" aria-label="Celadon" title="青 Celadon" style="--sw:#4F8273"><i></i></button>
+      <button type="button" data-p="zhu" aria-pressed="false" aria-label="Cinnabar" title="朱 Cinnabar" style="--sw:#A8382A"><i></i></button>
+      <button type="button" data-p="dian" aria-pressed="false" aria-label="Indigo" title="靛 Indigo" style="--sw:#2D4A7C"><i></i></button>
+      <button type="button" data-p="mei" aria-pressed="false" aria-label="Plum" title="梅 Plum" style="--sw:#8A3A62"><i></i></button>
+      <button type="button" data-p="bi" aria-pressed="false" aria-label="Teal" title="碧 Teal" style="--sw:#0E7489"><i></i></button>
+      <button type="button" data-p="jin" aria-pressed="false" aria-label="Gold" title="金 Gold" style="--sw:#8C6D22"><i></i></button>
+      <span class="pname" id="pname" aria-hidden="true">青</span>
+    </div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="hanrow" aria-hidden="true">作品集</div>
+      <h1 id="name" aria-label="Emily Xue">Emily Xue</h1>
+      <p class="lede">Decoding the convergence of technology and neuroscience through creative problem solving and hands-on projects. Based in Austin, Texas.</p>
+      <div class="meta">
+        <div><div class="label">Focus</div><div>CS · computational neuroscience</div></div>
+        <div><div class="label">Code</div><a href="https://github.com/Yumi1305" target="_blank" rel="noopener">github.com/Yumi1305</a></div>
+      </div>
+    </div>
+    <figure class="field" style="margin:0">
+      <canvas id="attractor" width="600" height="600" aria-label="A 30 by 30 grid of binary neurons cycling through eleven stored face patterns"></canvas>
+      <figcaption class="mono">
+        <span>V module · 30×30 · <span id="cyc">cycle 02 / 11</span></span>
+        <span class="hint">Drag to lesion neurons</span>
+      </figcaption>
+    </figure>
+  </div>
+</header>
+
+<main>
+<!-- 學 -->
+<section class="chapter" id="learning">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="glyph" aria-hidden="true">學</div>
+      <div>
+        <div class="label">Cofounder and webmaster · since 2025</div>
+        <h2>Students for Students</h2>
+        <p>Nonprofit peer-learning platform for widespread access to quality education. Student made and shared courses, study guides, etc. </p>
+      </div>
+    </div>
+    <div class="s4s">
+      <div class="orbit rise" aria-hidden="true">
+        <div class="ring"><span class="dot"></span></div>
+        <div class="ring b"><span class="dot"></span></div>
+        <div class="core"><div><span>student ↔ student</span><small class="label">peer to peer</small></div></div>
+      </div>
+      <div class="stack rise">
+        <ul class="points">
+          <li>Course pages pulled from a WordPress Tutor LMS backend through its API</li>
+          <li>Tutor profiles and a searchable course catalog</li>
+          <li>Sign-in, protected routes and material uploads on Supabase, with row-level security</li>
+          <li>GSAP transitions and a light and dark theme toggle</li>
+        </ul>
+        <ul class="chips"><li>React 19</li><li>Vite</li><li>Supabase</li><li>WordPress · Tutor LMS</li><li>GSAP</li></ul>
+        <div class="links">
+          <a class="btn" href="https://sfs-repo-h9wm.vercel.app" target="_blank" rel="noopener">Visit the site <span class="arrow">→</span></a>
+          <a class="btn ghost" href="https://github.com/Yumi1305/sfs-repo" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 腦 -->
+<section class="chapter" id="neuro">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="glyph" aria-hidden="true">腦</div>
+      <div>
+        <div class="label">Computational neuroscience · BU RISE</div>
+        <h2>Three-module RNN and a genetic algorithm for hallucinations</h2>
+        <p>A working Python reconstruction of the Nara, Fujii, Tsukada and Tsuda (2022) perception model, then a genetic algorithm that searches for the patterns of neuron death that make it hallucinate, as in dementia with Lewy bodies.</p>
+      </div>
+    </div>
+
+    <div class="neuro-top">
+      <div class="stack rise">
+        <p>The network has a visual module, a memory module and a perceiving module. Each stored memory is a cycle of ten states. A hallucination is when the perceiving module settles on a different stored cycle than the one the network holds: a coherent percept that is wrong.</p>
+        <p>The search evolves 3,000-bit "death vectors", one bit per neuron. Fitness rewards a stable wrong percept and slightly penalizes larger lesions, so the population converges on the smallest damage that is enough.</p>
+        <div class="facts">
+          <div><b>3,000</b><span>binary neurons · V 900, M 1,200, P 900</span></div>
+          <div><b>11 × 10</b><span>cycle attractors × phases, decoded from the paper's supplement</span></div>
+          <div><b>0</b><span>successor Hamming error across all 110 stored states</span></div>
+          <div><b>k = 3</b><span>tournament selection · crossover 0.90 · mutation 0.002 per bit</span></div>
+        </div>
+      </div>
+      <div class="genome rise">
+        <canvas id="genome" width="750" height="400" aria-label="Animated illustration of a 3,000 bit genome split into visual, memory and perceiving bands, with bits flipping as mutations"></canvas>
+        <div class="row">
+          <div class="legend mono"><span><i style="background:var(--ink)"></i>dead neuron</span><span><i style="background:var(--celadon)"></i>mutation</span></div>
+          <span class="mono" style="color:var(--ink-2)">illustration of one genome</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="percept">
+      <figure class="rise"><canvas id="pTarget" width="300" height="300" aria-label="Target perceiving pattern"></canvas><figcaption class="mono">P template · cycle 02</figcaption></figure>
+      <figure class="rise"><canvas id="pOut" width="300" height="300" aria-label="Perceiving module output"></canvas><figcaption class="mono" id="pOutCap">P output · matches cycle 02</figcaption></figure>
+      <div class="ptext rise">
+        <div class="label">Schematic</div>
+        <h3 style="font-size:var(--s2);margin-block:8px 12px">What the fitness function looks for</h3>
+        <p style="color:var(--ink-2)">Healthy networks keep the target percept. The evolved lesions push the perceiving module into a different face it has stored. Both grids use the real decoded P patterns.</p>
+        <div class="toggle" role="group" aria-label="Network state">
+          <button type="button" id="tHealthy" aria-pressed="true">Healthy</button>
+          <button type="button" id="tLesion" aria-pressed="false">Lesioned</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="figs">
+      <figure class="wipe"><img src="assets/ga.webp" alt="Diagram of the genetic algorithm: tournament selection, uniform crossover and bit-flip mutation" loading="lazy"><figcaption>From my poster: one generation of the search, from tournament selection to a mutated child genome.</figcaption></figure>
+      <figure class="wipe"><img src="assets/radial.webp" alt="Line chart of mean death probability by distance from module centre for the V, M and P modules at generation 200" loading="lazy"><figcaption>After 200 generations (N = 600), evolved lesions hit the perceiving module hardest, especially near its centre.</figcaption></figure>
+    </div>
+    <div class="links" style="margin-top:36px">
+      <a class="btn" href="https://github.com/Yumi1305/nara_three_module_model" target="_blank" rel="noopener">nara-three-module-rnn on GitHub <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 食 -->
+<section class="chapter" id="food">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="glyph" aria-hidden="true">食</div>
+      <div>
+        <div class="label">Restaurant websites</div>
+        <h2>Sites for places that feed people</h2>
+        <p>One full ordering platform for a family Chinese restaurant, and a run of free websites for Austin food businesses that didn't have one.</p>
+      </div>
+    </div>
+
+    <div class="fs">
+      <div class="rise">
+        <div class="photos">
+          <div class="ph a wipe"><img src="assets/food2.webp" alt="Dishes from Four Seasons" loading="lazy"></div>
+          <div class="ph b wipe"><img src="assets/skewers.webp" alt="Skewers from Four Seasons" loading="lazy"></div>
+          <div class="ph c wipe"><img src="assets/noodles.webp" alt="Noodles from Four Seasons" loading="lazy"></div>
+        </div>
+        <div class="seasons" aria-label="Four seasons">
+          <div><b>春</b><span class="label">Spring</span></div>
+          <div><b>夏</b><span class="label">Summer</span></div>
+          <div><b>秋</b><span class="label">Autumn</span></div>
+          <div><b>冬</b><span class="label">Winter</span></div>
+        </div>
+      </div>
+      <div class="stack rise">
+        <div class="label">Featured · 四季</div>
+        <h3>Four Seasons</h3>
+        <p>A marketing site and lunch-ordering platform for a family Chinese restaurant. Visitors see the menu, hours and a calendar of upcoming school-lunch events, then order and pay for a specific event. Customers never need an account.</p>
+        <ul class="points">
+          <li>Admin dashboard to schedule lunch events and watch orders come in</li>
+          <li>Square Web Payments in the browser, charged server-side through Square's payments API</li>
+          <li>All server logic in Supabase Edge Functions, with Postgres row-level security and no separate backend</li>
+        </ul>
+        <ul class="chips"><li>React 19 + TypeScript</li><li>Vite</li><li>React Router 7</li><li>Supabase</li><li>Edge Functions</li><li>Square</li></ul>
+        <div class="links"><a class="btn" href="https://github.com/Yumi1305/Four-Seasons-New" target="_blank" rel="noopener">View the code <span class="arrow">→</span></a></div>
+      </div>
+    </div>
+
+    <div class="more">
+      <div class="more-head">
+        <h3>Free sites for Austin food businesses</h3>
+        <span class="label">Live on Vercel</span>
+      </div>
+      <ul class="sites" id="sites"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 動 -->
+<section class="chapter" id="motion">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="glyph" aria-hidden="true">動</div>
+      <div>
+        <div class="label">Motion, personal sites and AI</div>
+        <h2>Things that move</h2>
+        <p>Where I learned front-end: hand-written CSS and JavaScript animation experiments, personal sites, and Lumi, an AI companion for staying focused.</p>
+      </div>
+    </div>
+
+    <div class="lumi">
+      <div class="breath rise" aria-hidden="true"><span class="c"></span><span class="c"></span><span class="c"></span><span class="t">breathe in<br><span class="label">4 · 7 · 8</span></span></div>
+      <div class="stack rise">
+        <div class="label">Featured · AI product</div>
+        <h3>Lumi</h3>
+        <p>A calm AI companion for students. Lumi talks you through a hard day, remembers what matters to you between conversations, and plans your schedule with you.</p>
+        <ul class="points">
+          <li>Companion chat with memory extraction and spoken replies</li>
+          <li>Focus room with rain and forest sounds, music and guided 4·7·8 and box breathing</li>
+          <li>Task planner and a shelf of short reads on focus and starting work</li>
+        </ul>
+        <ul class="chips"><li>Next.js 14</li><li>Claude API</li><li>OpenAI TTS</li><li>Web Audio</li></ul>
+        <div class="links">
+          <a class="btn" href="https://lumi-ai-nu.vercel.app/companion" target="_blank" rel="noopener">Open Lumi <span class="arrow">→</span></a>
+          <a class="btn ghost" href="https://github.com/Yumi1305/lumi-ai" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-head">
+      <h3>CSS and JS experiments</h3>
+      <a class="label" href="https://github.com/Yumi1305/CSS-and-JS-animations" target="_blank" rel="noopener">All on GitHub →</a>
+    </div>
+    <div class="exps">
+      <a class="exp rise" href="https://github.com/Yumi1305/CSS-and-JS-animations/tree/main/3D-soda-effect" target="_blank" rel="noopener">
+        <div class="stage" aria-hidden="true"><div class="can"><i></i></div><span class="bubble" style="left:30%"></span><span class="bubble" style="left:62%;animation-delay:-1.4s"></span><span class="bubble" style="left:46%;animation-delay:-2.7s"></span></div>
+        <div class="cap"><b>3D soda effect</b><span>A product hero where the can floats in depth between layered backgrounds.</span></div>
+      </a>
+      <a class="exp rise" href="https://github.com/Yumi1305/CSS-and-JS-animations/tree/main/perspective-sliding-animation" target="_blank" rel="noopener">
+        <div class="stage" aria-hidden="true"><div class="persp"><i></i><i></i><i></i></div></div>
+        <div class="cap"><b>Perspective slider</b><span>Images that swing through 3D space as they slide past.</span></div>
+      </a>
+      <a class="exp rise" href="https://github.com/Yumi1305/CSS-and-JS-animations/tree/main/slider-website" target="_blank" rel="noopener">
+        <div class="stage" aria-hidden="true"><div class="slides"><div><span>春</span><span>夏</span><span>秋</span><span>冬</span></div></div></div>
+        <div class="cap"><b>Slider personal site</b><span>A full-screen personal website built around a background slider.</span></div>
+      </a>
+      <a class="exp rise" href="https://github.com/Yumi1305/CSS-and-JS-animations/tree/main/more-practice" target="_blank" rel="noopener">
+        <div class="stage" aria-hidden="true"><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+        <div class="cap"><b>Scroll animations</b><span>Elements that reveal and stagger in as you scroll a photo page.</span></div>
+      </a>
+      <a class="exp rise" href="https://github.com/Yumi1305/CSS-and-JS-animations/tree/main/cool-website" target="_blank" rel="noopener">
+        <div class="stage" aria-hidden="true"><div class="type"><div><span>h</span><span style="animation-delay:.1s">e</span><span style="animation-delay:.2s">l</span><span style="animation-delay:.3s">l</span><span style="animation-delay:.4s">o</span></div></div></div>
+        <div class="cap"><b>Concept site</b><span>A personal landing page with a blog section and custom display type.</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h2>Emily Xue</h2>
+      <p>Building at the line between people and code. Everything here is open on GitHub.</p>
+      <div class="links" style="margin-top:24px"><a class="btn" href="https://github.com/Yumi1305" target="_blank" rel="noopener">github.com/Yumi1305 <span class="arrow">→</span></a></div>
+    </div>
+    <div class="bigseal" aria-hidden="true"><span>作</span><span>品</span><span>四</span><span>季</span></div>
+    <div class="colophon mono"><span>Austin, Texas</span><span>學 · 腦 · 食 · 動</span></div>
+  </div>
+</footer>
+
+<script>
+const ATT = {"visual": ["c0000004c0000020c000010cc000082dc0004088c0020212fff808480020212ffe8084a00a02128028084a00a0212802809ca00a03828028000a00a0002a028000b80a00029a28000c1fa000c060800c03fe00c01e040381f8080fdfa0103ff88020ff800046780000684000020100000", "0000000000000000000000000000000000000000000000000000007fffc001ffff0007fffc001c0070007001c001def700077bdc003c00700130912004c004800b0214001e00f0007c07c00041c400013e1000040020001fe08000007e000000000000000000000000000000000000000", "0000000000000000000000000000000000000000000000007e000007fe00003ffe0001ff78000ff8f0007fc1c003fc03801fe0ee005f2450012f0f40028661000f71ec003c003000f000c003e38f000f9f7c003d12f000e733c0038307000e001c0000000000000000000000000000000", "00000000000000000000000000000000000000003f000001fe000019e60001878600041e080010002001c120e005400a801dc0ee0055cea801cd2ce001186200040008000806400020690000ce6c00032b30001e71c0007c0f8003ffff000000000000000000000000000000000000000", "00000000000000000000000000000000fffe00077fdc003abab800e554e0038aa3800e150e0038283800e248e00245448008f5e2002800280050014000c006000100100004fe400009f20000238800004040000101000003f800000000000000000000000000000000000000000000000", "00000000000000000000000000000000000000000000000fffe0007fff8003ffe600060c040027039000b33340020301001cc0ce005078280143f0a0048fc4800e7f9c0009fe400010020000430800009e40000279000004c800000cc000001e000000000000000000000000000000000", "00000000000000000000000000000000000000007f800003ff00001ffe0000fffc0003fff0000f03c000373b0000dfec00021e100018cc600067f980018fe600064c18000c78c00010c20000400800009e400001320000021000000780000000000000000000000000000000000000000", "000000000000000000000000000000000000000000000027ff0000bfff8007ffff001de1fe002e0ef800e025e00200078008000e00200038008000e00260c3800b870600380118008000c00200020008ff100013fcc0006ff400007fe000007e000000000000000000000000000000000", "00000000000000000000000000000000000000007e000003ff00001ffe00007ff800038070000c00c0003ccf0000fffc00067f98001830600040c08001878600063f18001030200050028001478a00057fa80014fca00038070000601000007f800000000000000000000000000000000", "000000000000000000000000000000000000000010800001a580000fff00007ffe0003fffc001fdff800ff5fe003f55f800f555e003d557800f001e00380038006110c0008102000504100024826000a912400493948014208a00507c2800000000000000000000000000000000000000", "0000000000000000000000000000000000000000000000007f00003bfe00031ffc00103ff800307ff0003dffc000ffff8005d0be002a00b8002000a0018e188007048200044110001000400040020000888800031c400002020000043000000f000000000000000000000000000000000"], "perceiving": ["00000003ffffff80001002000040081e7900204924c0812492b2279e4aa880012aa200046a8800101a2003c00887f08023e001008800030220000208838004210a0008822f001204fc00281250006029400100800008010000400400020008001000200080008004000101e00003f8000", "0000000000000000000000000000000ff0000030400000f70000070600002554000090500001498000030400000dd00000100000007f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "00000000000000000000000000000000000000007c000003f800001ff0000060c00001ef000007bc0000092000002a800000ba000001100000038000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f0000005a0000036c00000e70000030c000005a00000198000003c00000000000000000000000000000000000", "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001f000000fe00000208000016d000004440000155000005540000101000004e40000082000001f0000000000000000000000000", "0000000000000000000000000000000000000000000000000000000000000000000001ff000006c4000010100000514000030180000de6000037d800009f2000017d000003f80000042000000e00000038000000000000000000000000000000000000000000000000000000000000000", "00000000003c000001f800000c30000029400000db0000036c0000043000001680000024000000f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "00000000000000000000000000000000000000000000000000000000000000000003f800000ff0000039e00000cf80000006000006d8000000200000dc800003f800000380000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003f000000fc0000000000000cc000005e80000132000004c8000017a0000040800000fc000001e00000000000", "0000000000000000000000000000000000000000000000000000000000000000000000000000000088000002a000001fc000004100000154000002a0000012400000140000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007c000002f000001fe00000108000006600000108000005a00000108000003c000000000000000000000000000000000000000000000000000000000000000000000000"], "v2phases": ["0000000000000000000000000000000000000000000000007e000007fe00003ffe0001ff78000ff8f0007fc1c003fc03801fe0ee005f2450012f0f40028661000f71ec003c003000f000c003e38f000f9f7c003d12f000e733c0038307000e001c0000000000000000000000000000000", "000000000000000000000000000000000000000000000000ff00000fff0000fffe0003fefc000ff1f8007f03e003f007801b000e0043870801112220020001800cb24c0031863000e001c003c48f000f8c7c003f03f000fb37c003c30f000e001c0000000000000000000000000000000", "000000000000000000000000000000000000000000000007ffc0003fff8000ffff0007ffbe003ff87800ff80e007f8008010e1c20044488801c00040071ce1001ce1cc0070003000e001c003c00f000f8c7c003f03f000fb37c0038307000c000c0000000000000000000000000000000", "0000000000000000000000000000000000000000000000083e200047ff80047fff000fff7c001fc1f800fe03e003f007801fe1ce004c4888018e1c20038cc1800e000c003c0030007001c001e30f0007d27c001f83f000ff37c003c30f000c000c0000000000000000000000000000000", "0000000000000000000000000000000000000000000000007f000007ff00007ffe0001fefc000ff1f0007f03c003f007801be1ce0044488801041820032cd1800e922c0038003000f001c003efcf000fde7c003eb3f000fb37c003c30f000e001c0000000000000000000000000000000", "0000000000000000000000000000000000000000000000003f000003fe00003ffc0001ff78000ffcf000ffe1e003fe33800fe1e6007e480801471820050ce0800f000e003c003000f8c0c003e487000fcc7c003f87f000f3f7c003800f000e001c0000000000000000000000000000000", "0000000000000000000000000000000000000000000000007e000007fe00003ffe0001ff78000ff8f0007fc1c003fc03801fe0ee005f2450012f0f40028661000f71ec003c003000f000c003e38f000f9f7c003d12f000e733c0038307000e001c0000000000000000000000000000000", "000000000000000000000000000000000000000000000000ff00000fff0000fffe0003fefc000ff1f8007f03e003f007801b000e0043870801112220020001800cb24c0031863000e001c003c48f000f8c7c003f03f000fb37c003c30f000e001c0000000000000000000000000000000", "000000000000000000000000000000000000000000000007ffc0003fff8000ffff0007ffbe003ff87800ff80e007f8008010e1c20044488801c00040071ce1001ce1cc0070003000e001c003c00f000f8c7c003f03f000fb37c0038307000c000c0000000000000000000000000000000", "0000000000000000000000000000000000000000000000083e200047ff80047fff000fff7c001fc1f800fe03e003f007801fe1ce004c4888018e1c20038cc1800e000c003c0030007001c001e30f0007d27c001f83f000ff37c003c30f000c000c0000000000000000000000000000000"]};
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const toBits = h => { let s=''; for (const c of h) s += parseInt(c,16).toString(2).padStart(4,'0'); return s.slice(-900).split('').map(Number); };
+const V = ATT.visual.map(toBits), P = ATT.perceiving.map(toBits);
+let css = getComputedStyle(document.documentElement);
+const tok = n => css.getPropertyValue(n).trim();
+const refreshTokens = () => { css = getComputedStyle(document.documentElement); };
+matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', refreshTokens);
+new MutationObserver(refreshTokens).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme','data-palette']});
+
+/* palette switcher with an ink-drop reveal */
+(() => {
+  const root=document.documentElement, btns=[...document.querySelectorAll('.palette button')], pname=document.getElementById('pname');
+  const glyph={qing:'青',zhu:'朱',dian:'靛',mei:'梅',bi:'碧',jin:'金'};
+  const apply=p=>{ if(p==='qing') root.removeAttribute('data-palette'); else root.setAttribute('data-palette',p);
+    btns.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.p===p))); pname.textContent=glyph[p]; };
+  let saved=null; try{ saved=localStorage.getItem('palette'); }catch(e){}
+  if(saved && glyph[saved]) apply(saved);
+  btns.forEach(b=>b.addEventListener('click',e=>{
+    const p=b.dataset.p; try{ localStorage.setItem('palette',p); }catch(err){}
+    if(!document.startViewTransition || reduce){ apply(p); return; }
+    const x=e.clientX||innerWidth-40, y=e.clientY||30, r=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));
+    const vt=document.startViewTransition(()=>apply(p));
+    vt.ready.then(()=>root.animate({clipPath:[`circle(0px at ${x}px ${y}px)`,`circle(${r}px at ${x}px ${y}px)`]},{duration:900,easing:'cubic-bezier(.7,0,.2,1)',pseudoElement:'::view-transition-new(root)'})).catch(()=>{});
+  }));
+})();
+
+/* name split into ink letters */
+(() => {
+  const h = document.getElementById('name'); const t = h.textContent; h.textContent='';
+  [...t].forEach((c,i)=>{ const s=document.createElement('span'); s.className='ch'; s.setAttribute('aria-hidden','true'); s.textContent=c===' '?' ':c; s.style.animationDelay=(0.08+i*0.06)+'s'; h.appendChild(s); });
+})();
+
+/* restaurant sites */
+(() => {
+  const sites = [
+    ['West China Tea House','west-china-tea-house','Tea house'],
+    ['HoHo Chinese BBQ','hoho-chinese-bbq','Chinese BBQ'],
+    ['Tea Cup Boba House','tea-cup-boba-house','Boba'],
+    ["Little Mama's Filipino",'little-mamas-filipino','Filipino'],
+    ["Roland's Soul Food",'rolands-soul-food','Soul food'],
+    ['Bigg Belly BBQ','bigg-belly-bbq','BBQ'],
+    ["Lily's Sandwich",'lilys-sandwich','Sandwiches'],
+    ['Baguette House Cafe','baguette-house-cafe','Café'],
+    ['Buffet Palace','buffet-palace-austin','Buffet'],
+    ['Hhomdee Thai Desserts','hhomdee-thai-desserts','Thai desserts'],
+    ["Kat's Hand Baked",'kats-hand-baked','Bakery'],
+    ["Sweet Clem's Bakery",'sweet-clems-bakery','Bakery'],
+    ['The Austin Cakery','the-austin-cakery','Cakes'],
+    ['The Interrupted Baker','the-interrupted-baker','Bakery'],
+    ['Niella Catering','niella-catering','Catering'],
+  ];
+  const ul = document.getElementById('sites');
+  ul.innerHTML = sites.map(([n,s,k])=>`<li><a href="https://${s}.vercel.app" target="_blank" rel="noopener"><span class="n">${n}</span><span class="mono">${k}</span><span aria-hidden="true">↗</span></a></li>`).join('');
+})();
+
+/* pixel field helpers */
+function fitCanvas(cv){ const r=cv.getBoundingClientRect(); const d=Math.min(devicePixelRatio||1,2); const w=Math.max(1,Math.round(r.width*d)), h=Math.max(1,Math.round(r.height*d)); if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;} return [w,h]; }
+
+/* hero attractor field */
+(() => {
+  const cv = document.getElementById('attractor'), ctx = cv.getContext('2d'), cap = document.getElementById('cyc');
+  const N=30, cells = new Float32Array(900), target = new Float32Array(900), delay = new Float32Array(900), dead = new Float32Array(900);
+  let cyc = 2, t0 = performance.now(), lastSwitch = t0;
+  const setTarget = (c, now, spread) => { cyc=c; V[c].forEach((b,i)=>{ target[i]=b; delay[i]=now + Math.random()*spread; }); cap.textContent = 'cycle '+String(c).padStart(2,'0')+' / 11'; };
+  setTarget(2, t0+300, reduce?0:1100);
+  if (reduce) cells.set(target);
+  let ptr=null;
+  const toCell = e => { const r=cv.getBoundingClientRect(); return [(e.clientX-r.left)/r.width*N,(e.clientY-r.top)/r.height*N]; };
+  cv.addEventListener('pointermove', e=>{ ptr=toCell(e); });
+  cv.addEventListener('pointerleave', ()=>{ ptr=null; });
+  cv.addEventListener('pointerdown', e=>{ ptr=toCell(e); });
+  cv.addEventListener('click', ()=>{ if(!reduce) { setTarget((cyc+1)%11, performance.now(), 700); lastSwitch=performance.now(); } else { setTarget((cyc+1)%11,0,0); cells.set(target); draw(performance.now()); } });
+  function draw(now){
+    const [w,h]=fitCanvas(cv); const s=w/N, g=Math.max(1,s*0.12);
+    const ink=tok('--ink'), cel=tok('--celadon'), rule=tok('--rule');
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle=rule; for(let y=0;y<N;y++)for(let x=0;x<N;x++){ ctx.fillRect(x*s+s/2-0.5*g,y*s+s/2-0.5*g,g,g); }
+    for(let i=0;i<900;i++){
+      const x=i%N, y=(i/N)|0, v=cells[i];
+      if(dead[i]>0.02){ ctx.globalAlpha=Math.min(1,dead[i]); ctx.strokeStyle=cel; ctx.lineWidth=Math.max(1,s*0.08); ctx.strokeRect(x*s+s*0.22,y*s+s*0.22,s*0.56,s*0.56); ctx.globalAlpha=1; continue; }
+      if(v<0.02) continue;
+      const k=v*(s-g); ctx.fillStyle=ink; ctx.fillRect(x*s+(s-k)/2,y*s+(s-k)/2,k,k);
+    }
+  }
+  function loop(now){
+    if(now-lastSwitch>3200){ setTarget((cyc+1)%11, now, 900); lastSwitch=now; }
+    for(let i=0;i<900;i++){
+      if(now>delay[i]) cells[i]+= (target[i]-cells[i])*0.22;
+      if(ptr){ const x=i%N+0.5, y=((i/N)|0)+0.5, d=Math.hypot(x-ptr[0],y-ptr[1]); if(d<2.6) dead[i]=Math.min(1.6,dead[i]+0.35); }
+      if(dead[i]>0) dead[i]=Math.max(0,dead[i]-0.012);
+    }
+    draw(now); requestAnimationFrame(loop);
+  }
+  if(reduce){ draw(0); addEventListener('resize',()=>draw(0)); } else requestAnimationFrame(loop);
+})();
+
+/* genome illustration */
+(() => {
+  const cv=document.getElementById('genome'), ctx=cv.getContext('2d');
+  const C=75, R=40, bits=new Uint8Array(3000), flash=new Float32Array(3000);
+  for(let i=0;i<3000;i++){ const p = i<900?0.26 : i<2100?0.25 : 0.40; bits[i]=Math.random()<p?1:0; }
+  let visible=true; new IntersectionObserver(es=>{visible=es[0].isIntersecting}).observe(cv);
+  function draw(){
+    const [w,h]=fitCanvas(cv); const s=w/C, g=s*0.16;
+    const ink=tok('--ink'), cel=tok('--celadon'), rule=tok('--rule');
+    ctx.clearRect(0,0,w,h);
+    for(let i=0;i<3000;i++){ const x=i%C, y=(i/C)|0;
+      const bandGap = (y>=12?s*0.0:0);
+      if(flash[i]>0.02){ ctx.fillStyle=cel; ctx.globalAlpha=Math.min(1,flash[i]); ctx.fillRect(x*s+g/2,y*s+g/2,s-g,s-g); ctx.globalAlpha=1; continue; }
+      ctx.fillStyle = bits[i]?ink:rule; ctx.fillRect(x*s+g/2,y*s+g/2+bandGap,s-g,s-g);
+    }
+    ctx.fillStyle=tok('--paper'); ctx.fillRect(0,12*s-1,w,2); ctx.fillRect(0,28*s-1,w,2);
+    ctx.font=`500 ${Math.round(s*1.6)}px ${tok('--f-mono')}`; ctx.textBaseline='top';
+    [['V · visual',0],['M · memory',12],['P · perceiving',28]].forEach(([t,r])=>{ const tw=ctx.measureText(t).width; ctx.fillStyle=tok('--paper-2'); ctx.fillRect(w-tw-s*1.4,r*s+s*0.3,tw+s,s*2.1); ctx.fillStyle=ink; ctx.fillText(t,w-tw-s*0.9,r*s+s*0.55); });
+  }
+  let last=0;
+  function loop(now){
+    if(visible && now-last>110){ last=now; for(let k=0;k<6;k++){ const i=(Math.random()*3000)|0; bits[i]^=1; flash[i]=1.4; } }
+    for(let i=0;i<3000;i++) if(flash[i]>0) flash[i]-=0.035;
+    if(visible) draw(); requestAnimationFrame(loop);
+  }
+  if(reduce){ draw(); addEventListener('resize',draw); } else requestAnimationFrame(loop);
+})();
+
+/* perception schematic */
+(() => {
+  const a=document.getElementById('pTarget'), b=document.getElementById('pOut'), capEl=document.getElementById('pOutCap');
+  const bh=document.getElementById('tHealthy'), bl=document.getElementById('tLesion');
+  const cur=new Float32Array(900); P[2].forEach((v,i)=>cur[i]=v); let tgt=P[2].slice(), order=[];
+  function paint(cv, arr){ const ctx=cv.getContext('2d'); const [w]=fitCanvas(cv); const s=w/30; ctx.clearRect(0,0,w,w); ctx.fillStyle=tok('--ink');
+    for(let i=0;i<900;i++){ const v=arr[i]; if(v<0.03) continue; const k=v*(s*0.9); ctx.fillRect((i%30)*s+(s-k)/2,((i/30)|0)*s+(s-k)/2,k,k);} }
+  function set(lesioned){
+    bh.setAttribute('aria-pressed',String(!lesioned)); bl.setAttribute('aria-pressed',String(lesioned));
+    tgt = (lesioned?P[6]:P[2]).slice(); order=[...Array(900).keys()].sort(()=>Math.random()-.5);
+    capEl.textContent = lesioned ? 'P output · settles on cycle 06' : 'P output · matches cycle 02';
+    if(reduce){ tgt.forEach((v,i)=>cur[i]=v); paint(b,cur); }
+  }
+  bh.addEventListener('click',()=>set(false)); bl.addEventListener('click',()=>set(true));
+  let step=0;
+  function loop(){ let moved=false; const n=Math.min(order.length,40); for(let k=0;k<n;k++){ order.shift(); }
+    for(let i=0;i<900;i++){ const d=tgt[i]-cur[i]; if(Math.abs(d)>0.01){ cur[i]+=d*0.12; moved=true; } }
+    paint(b,cur); requestAnimationFrame(loop); }
+  paint(a,P[2]);
+  if(reduce){ paint(b,cur); addEventListener('resize',()=>{paint(a,P[2]);paint(b,cur);}); }
+  else { addEventListener('resize',()=>paint(a,P[2])); requestAnimationFrame(loop); }
+  // auto demo once when scrolled into view
+  let done=false; new IntersectionObserver(es=>{ if(es[0].isIntersecting && !done && !reduce){ done=true; setTimeout(()=>set(true),900); } },{threshold:.5}).observe(b);
+})();
+
+/* gentle tilt on experiment tiles */
+if(!reduce && matchMedia('(hover:hover)').matches){
+  document.querySelectorAll('.exp').forEach(el=>{
+    el.addEventListener('pointermove',e=>{ const r=el.getBoundingClientRect(); const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5; el.style.transform=`perspective(800px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-4px)`; });
+    el.addEventListener('pointerleave',()=>{ el.style.transform=''; });
+  });
+}
+</script>
+
+</body>
+</html>
